@@ -367,20 +367,20 @@ Read more about 'Mutable References' in the book's section 'References and
 Borrowing':
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references."""
 
-##[[exercises]]
-##name = "move_semantics5"
-##dir = "06_move_semantics"
-##test = false
-##hint = """
-##To find the answer, you can consult the book section "References and Borrowing":
-##https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
-##
-##The first problem is that `get_char` is taking ownership of the string. So
-##`data` is moved and can't be used for `string_uppercase`. `data` is moved to
-##`get_char` first, meaning that `string_uppercase` can't manipulate the data.
-##
-##Once you've fixed that, `string_uppercase`'s function signature will also need
-##to be adjusted."""
+[[exercises]]
+name = "move_semantics5"
+dir = "06_move_semantics"
+test = false
+hint = """
+To find the answer, you can consult the book section "References and Borrowing":
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+
+The first problem is that `get_char` is taking ownership of the string. So
+`data` is moved and can't be used for `string_uppercase`. `data` is moved to
+`get_char` first, meaning that `string_uppercase` can't manipulate the data.
+
+Once you've fixed that, `string_uppercase`'s function signature will also need
+to be adjusted."""
 
 # STRUCTS
 
@@ -447,6 +447,7 @@ enum EnumUsingAllVariantForms {
     UnitLike,
 }"""
 
+# TODO: the hint here is misleading, the enums are already created
 [[exercises]]
 name = "enums3"
 dir = "08_enums"
@@ -503,20 +504,20 @@ the string slice into an owned string, which you can then freely extend.
 For the `replace_me` method, you can check out the `replace` method:
 https://doc.rust-lang.org/std/string/struct.String.html#method.replace"""
 
-##[[exercises]]
-##name = "strings4"
-##dir = "09_strings"
-##test = false
-##hint = """
-##Replace `placeholder` with either `string` or `string_slice` in the `main`
-##function.
-##
-##Example:
-##`placeholder("blue");`
-##should become
-##`string_slice("blue");`
-##because "blue" is `&str`, not `String`."""
-##
+[[exercises]]
+name = "strings4"
+dir = "09_strings"
+test = false
+hint = """
+Replace `placeholder` with either `string` or `string_slice` in the `main`
+function.
+
+Example:
+`placeholder("blue");`
+should become
+`string_slice("blue");`
+because "blue" is `&str`, not `String`."""
+
 ### MODULES
 ##
 ##[[exercises]]
@@ -582,14 +583,15 @@ https://doc.rust-lang.org/std/string/struct.String.html#method.replace"""
 ##
 # QUIZ 2
 
-# TODO: check the content of this quiz, does it make sense given the subset?
-[[exercises]]
-name = "quiz2"
-dir = "quizzes"
-hint = "The `+` operator can concatenate a `String` with a `&str`."
+## TODO: check the content of this quiz, does it make sense given the subset?
+#
+#[[exercises]]
+#name = "quiz2"
+#dir = "quizzes"
+#hint = "The `+` operator can concatenate a `String` with a `&str`."
 
 # OPTIONS
-
+# TODO: their solution is too much!! Update the hint to say if/else and use match as a stretch exercise
 [[exercises]]
 name = "options1"
 dir = "12_options"

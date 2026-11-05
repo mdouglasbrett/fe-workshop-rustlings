@@ -2,6 +2,7 @@
 // If it's before 22:00 (24-hour system), then 5 scoops are left. At 22:00,
 // someone eats it all, so no ice cream is left (value 0). Return `None` if
 // `hour_of_day` is higher than 23.
+// TODO: This is a 'idiomatic' rust solution. Using if/else is fine too!!
 fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
     match hour_of_day {
         0..=21 => Some(5),
